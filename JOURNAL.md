@@ -50,3 +50,25 @@ Until then, TheAbsoluteMin out!
 **Total time spent: 2.5 hours**
 
 ---
+
+# Log 3: 6.6.2026 - Hackpad PCB Design
+
+Timelapse <a href="https://lapse.hackclub.com/timelapse/R-Lok60rAeRo">link</a>.
+
+** Please note that this [Devlog](https://stardance.hackclub.com/projects/6806) was imported from Stardance. **
+
+Hello! Today, in additon to adding a passive buzzer to my hackpad, I spent a good portion of time working on the PCB design and routing. It was especially challenging and time consuming as I had to determine the routing for so many components!
+
+With that, I am pleased to share with you that I have decided on the purpose of my hackpad…
+
+…I am hoping to turn it into a custom Pocket Operator!
+
+Now, I just have to figure out how to solve the 32 errors and 31 warnings the KiCad DRC flagged…
+
+<img width="598" height="720" alt="image" src="https://github.com/user-attachments/assets/baf72081-c54f-4d8e-b5c2-26185a0caa4b" />
+
+Until then, TheAbsoluteMin out!
+
+**Total time spent: 3.5 hours**
+
+---

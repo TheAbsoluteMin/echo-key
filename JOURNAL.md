@@ -72,3 +72,19 @@ Until then, TheAbsoluteMin out!
 **Total time spent: 3.5 hours**
 
 ---
+
+# Log 4: 6.7.2026 - Minor PCB Parts Adjustments
+
+Timelapse <a href="https://lapse.hackclub.com/timelapse/TkbHmnJH4lMN">link</a>.
+
+** Please note that this [Devlog](https://stardance.hackclub.com/projects/6806) was imported from Stardance. **
+
+Hi! After referencing passive buzzer guides I realized that I needed resistors, not diodes, for it, so I updated the schematics and PCB. I figured out the errors were simply because of the LED holes, which were made by default of the LED library, so after dismissing them, I was ready to move on to designing the hackpad case!
+
+<img width="492" height="592" alt="image" src="https://github.com/user-attachments/assets/05691821-35e1-4611-b7c4-de970f52da3e" />
+
+Until then, TheAbsoluteMin out!
+
+**Total time spent: 1 hour**
+
+---

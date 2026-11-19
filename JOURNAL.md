@@ -88,3 +88,19 @@ Until then, TheAbsoluteMin out!
 **Total time spent: 1 hour**
 
 ---
+
+# Log 5: 6.9.2026 - Hackpad CAD Design
+
+Timelapse <a href="https://lapse.hackclub.com/timelapse/mBvQilO03y46">link</a>.
+
+** Please note that this [Devlog](https://stardance.hackclub.com/projects/6806) was imported from Stardance. **
+
+It was my first time using Autodesk Fusion for CAD, and I immediately learned that the tools greatly differed from Tinkercad. After about 4 hours, I finally began to adapt to the new tools, and I almost completed my hackpad case! I still need to figure out how to add 16mm screws in a case only about 14mm tall… 
+
+<img width="1357" height="709" alt="image" src="https://github.com/user-attachments/assets/bb9c1f14-0e05-4809-87c4-e1f8c6f25221" />
+
+Until then, TheAbsoluteMin out!
+
+**Total time spent: 4.3 hour**
+
+---

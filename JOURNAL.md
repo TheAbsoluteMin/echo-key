@@ -101,6 +101,48 @@ It was my first time using Autodesk Fusion for CAD, and I immediately learned th
 
 Until then, TheAbsoluteMin out!
 
-**Total time spent: 4.3 hour**
+**Total time spent: 4.3 hours**
+
+---
+
+# Log 6: 11.14.2026 - Schematics Remake!
+
+Timelapse <a href="https://lapse.hackclub.com/timelapse/yJHmyyOfqdHM">link</a>.
+
+After almost 5 months, I have finally revisited my macropad project! This time, I have a new idea, which reimagines the macropad. Instead of carrying around a sizable boxy macropad, you can keep a tiny, sleek dongle inserted into your computer. Instead of spending a couple seconds figuring out which key to press, you can simply speak out your desired macro in milliseconds. Instead of adding another physical key to your macropad for every new macro, you can effortlessly code a new one without changing the hardware.
+
+Now, I will introduce to you the Version 2 of my macropad: EchoKey.
+
+In a single sentence, EchoKey is a compact USB dongle PC buddy for your everyday voice commands.
+
+For the new schematics and PCB, I am using EasyEDA Pro. It took me a while to set up the schematics since I also had to find the exact LCSC part for each component, so ordering the PCB and PCB assembly will be seamless later.
+
+I started with the ESP32-S3FH4R2 MCU, which I chose because of its unique specifications. Its 2 MB of embedded PSRAM is a great buffer for running a local tiny AI to recognize and buffer voice commands from a MEMS I2S microphone (which I will include later). Its 4 MB of embedded flash is also great for storing many macros. With built-in USB Human Interface Device (USB HID), the MCU can send the macro tied to the voice command to the computer via USB-A.
+
+<img width="1813" height="985" alt="image" src="https://github.com/user-attachments/assets/2f08db80-99fd-4748-bed8-eccb7347894c" />
+<img width="1819" height="989" alt="image" src="https://github.com/user-attachments/assets/3fbb4068-4404-438c-96de-2d2cba1006a0" />
+
+After placing the chip, I used the official reference schematics to begin placing the required passives.
+
+<img width="1813" height="985" alt="image" src="https://github.com/user-attachments/assets/275e1535-6eee-4c4a-9e8d-d6c1344d351c" />
+
+Since I did not need the WiFi/Bluetooth capabilities, I left the antenna pin (LNA_IN) floating.
+
+<img width="1813" height="985" alt="image" src="https://github.com/user-attachments/assets/4cd76d10-6ed7-41e0-b73b-0dfd9176f6e7" />
+
+I began finding the capacitors for the power rails.
+
+<img width="1813" height="985" alt="image" src="https://github.com/user-attachments/assets/a17b9495-13ea-4d96-b96c-c1ee71e79fc7" />
+
+Then, I placed the 40MHz crystal oscillator for the MCU.
+
+<img width="1813" height="985" alt="image" src="https://github.com/user-attachments/assets/22864b67-5430-440d-bd1f-5a2caa8cd4e4" />
+
+I made sure to add a button circuit and pull up resistors on the CHIP_PU and GPIO0 Boot pins.
+
+<img width="1813" height="985" alt="image" src="https://github.com/user-attachments/assets/b2e471a8-c67f-4af3-85e9-bc2ed27ccb1c" />
+<img width="1813" height="985" alt="image" src="https://github.com/user-attachments/assets/e0bb8551-ad8f-49c1-a864-036e4440d273" />
+
+**Total time spent: 1.7 hours**
 
 ---

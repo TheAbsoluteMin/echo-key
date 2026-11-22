@@ -146,3 +146,63 @@ I made sure to add a button circuit and pull up resistors on the CHIP_PU and GPI
 **Total time spent: 1.7 hours**
 
 ---
+
+# Log 7: 11.15.2026 - Finalizing Schematics
+
+Timelapse <a href="https://lapse.hackclub.com/timelapse/uQCoOLMX6Ctl">link</a>.
+
+I read through the Schematic Checklist, and I first made sure to isolate the bootstrapping pins.
+
+<img width="1824" height="977" alt="image" src="https://github.com/user-attachments/assets/5ff7bef6-47ba-4b66-88d8-35b632ea2ac1" />
+
+Then, I began to build the power blocks. In order to minimize my dongle's size, I used the USB-A male part. I also included the USBLC6-2SC6 ESD protection.
+
+<img width="1824" height="977" alt="image" src="https://github.com/user-attachments/assets/27472a98-8246-4115-8396-90ddd7b5de23" />
+
+The data sheet recommended series resistors on the USB data lines, so I added 22 ohms resistors.
+
+<img width="1824" height="977" alt="image" src="https://github.com/user-attachments/assets/9aa15a14-0ca5-4070-aa6f-5e30746ff5de" />
+<img width="1824" height="977" alt="image" src="https://github.com/user-attachments/assets/379218a0-1b4b-4701-880a-4273e17ad91f" />
+
+After that, I needed to route the 3V3 LDO. I checked the datasheet on LCSC for the AP2112K-3.3TRG1.
+
+<img width="1784" height="984" alt="image" src="https://github.com/user-attachments/assets/cedc32e5-46f8-4b8f-bc17-1520cfcb294a" />
+<img width="1784" height="984" alt="image" src="https://github.com/user-attachments/assets/2e0a9fab-c5de-4e46-8cb1-9c43b82da912" />
+
+I wired the LDO accordingly on my schematics.
+
+<img width="1784" height="984" alt="image" src="https://github.com/user-attachments/assets/3876ad85-9640-4ff7-9293-d6be9f5f090e" />
+
+Then, I went searching for a microphone that would capture the voice commands for my dongle.
+
+<img width="1784" height="984" alt="image" src="https://github.com/user-attachments/assets/ef36bfc3-84c6-42d4-a73f-abad92693bd9" />
+
+I settled on the ICS-43432 I2S MEMS microphone. I wanted to use the newer ICS-43434 one, but despite being cheaper, it did not allow for economic PCBA.
+
+<img width="1784" height="984" alt="image" src="https://github.com/user-attachments/assets/f50106ef-7692-4036-af09-3f267fd57fce" />
+
+After finding the example circuit diagram from the datas sheet, I routed the microphone.
+
+<img width="1784" height="984" alt="image" src="https://github.com/user-attachments/assets/33a9f2e0-06f6-4cd3-90c2-4bc3c7a49f3d" />
+<img width="1819" height="977" alt="image" src="https://github.com/user-attachments/assets/5ad786f7-a64e-4941-9bf0-4b0c2adff9a0" />
+
+Since my dongle already used USB HID, I realized that it could also manage all my passwords! Thus, I added the ATECC608C cryptographic chip, which will securely store keys to protect passwords. With that, I could simply tell my dongle to log into multiple sites for me!
+
+<img width="1819" height="977" alt="image" src="https://github.com/user-attachments/assets/1efbfec6-e520-4f00-873f-7e38f118db3b" />
+
+The data sheet on LCSC for the chip was actually outdated (it was an older model of the chip), so I had to download the data sheet from the JLCPCB part page. Still, there was no example circuit, so I visited the Microchip website for their sample circuit.
+
+<img width="1819" height="977" alt="image" src="https://github.com/user-attachments/assets/ea10ae06-3edc-4f9d-b527-a8ff75ce9f03" />
+
+I also referenced Adafruit's design as well to make sure I wired the chip correctly since Microchip's circuit design was a somewhat complicated and unnecessary for my purposes (they wired multiple cryptographic chips together while I only needed one).
+
+<img width="1792" height="988" alt="image" src="https://github.com/user-attachments/assets/ed420010-2d91-483c-812b-dd3226c19a74" />
+
+Finally, I wired an RGB LED that would signify that the dongle was working properly.
+
+<img width="1792" height="988" alt="image" src="https://github.com/user-attachments/assets/2c6abffb-9506-42ec-828a-0dbe14dec368" />
+
+
+**Total time spent: 2.8 hours**
+
+---

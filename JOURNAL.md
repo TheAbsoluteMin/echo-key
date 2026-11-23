@@ -206,3 +206,22 @@ Finally, I wired an RGB LED that would signify that the dongle was working prope
 **Total time spent: 2.8 hours**
 
 ---
+
+# Log 8: 11.18.2026 - Starting PCB Placement
+
+Timelapse <a href="https://lapse.hackclub.com/timelapse/6qZBdIVC0H0D">link</a>.
+
+As I began to work on my PCB, I first drew the border outline with the rectangle tool.
+
+<img width="1814" height="984" alt="image" src="https://github.com/user-attachments/assets/36bd2c28-87c7-44f0-bb02-a5f24f28dec9" />
+
+I then placed the USB-A male part on the right side, so I could visualize how much room I had for the rest of the components.
+
+<img width="1814" height="984" alt="image" src="https://github.com/user-attachments/assets/4fce2ec2-b76a-405f-8d8c-0e42a669de3a" />
+
+I began placing the passives and 
+
+
+**Total time spent: 2.5 hours**
+
+---

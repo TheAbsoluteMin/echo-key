@@ -355,9 +355,19 @@ Then, I decided to place vias together at the ESD protection chip. That allowed 
 
 This was routing was much cleaner!
 
+<img width="1815" height="1043" alt="image" src="https://github.com/user-attachments/assets/2d1fd773-fef3-485f-94f3-155f8460b215" />
 <img width="1816" height="979" alt="image" src="https://github.com/user-attachments/assets/3e1a1d86-47df-4dcf-86c5-334ff8bb0646" />
 
-//more update
+I then began to route the power traces. For the 5V lines, I chose a width of 0.2 mm and a clearance of 0.2 mm in order to fit my traces on the top layer. I also did not need much current since I am not using WiFi nor Bluetooth.
+
+<img width="1818" height="1040" alt="image" src="https://github.com/user-attachments/assets/8e6b7306-1e39-4333-b8b6-5256cfc1c492" />
+
+It was a bit tricky to route the 5V line from the USB-A to the ESD protection chip since I had to enter from the right of the chip and then do a U-turn out to its 100nF capacitor.
+
+<img width="1811" height="1028" alt="image" src="https://github.com/user-attachments/assets/2fd584c1-479c-4644-a64f-d9fdeeeb4fa8" />
+<img width="1812" height="1033" alt="image" src="https://github.com/user-attachments/assets/191fe3b6-7690-4c9e-a38f-1c6d18e491ed" />
+
+I hope to get more routing progress next time!
 
 **Total time spent: 4.4 hours**
 

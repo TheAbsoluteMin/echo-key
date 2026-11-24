@@ -372,3 +372,43 @@ I hope to get more routing progress next time!
 **Total time spent: 4.4 hours**
 
 ---
+
+# Log 10: 11.20.2026 - Begin Routing PCB
+
+Timelapse <a href="https://lapse.hackclub.com/timelapse/HEDAbL8ouOaK">link</a>.
+
+I have to admit routing the 5V line was a bit risky since I had to loop the line around. I did my best to maintain a good clearance.
+
+<img width="1917" height="1000" alt="image" src="https://github.com/user-attachments/assets/3aadacbb-1d2e-430c-b1fe-081df58300e7" />
+
+After that, the LDO was relatively simple to route.
+
+<img width="1917" height="792" alt="image" src="https://github.com/user-attachments/assets/8f76f177-0559-4d98-999f-19bdebd03265" />
+
+Then, I began routing the MCU. I started with its 40MHz crystal oscillator. Since I had little space for the clock traces, I decided to use 0.127 mm wide traces. 
+
+<img width="1917" height="791" alt="image" src="https://github.com/user-attachments/assets/a2087eb1-45d4-427e-9b47-a78286cacda8" />
+
+Fortunately, there was enough room!
+
+<img width="1917" height="792" alt="image" src="https://github.com/user-attachments/assets/fb98ffb6-3bdc-4484-ba7d-4b765017db8e" />
+
+However, there was not enough space for a GND via for pad 2 of the crystal oscillator.
+
+<img width="1917" height="792" alt="image" src="https://github.com/user-attachments/assets/de47040a-ac76-4069-9d21-8e48121aa5e1" />
+
+Thus, I decided to simply connect the two GND pads together and break out GND vias above.
+
+<img width="1917" height="792" alt="image" src="https://github.com/user-attachments/assets/6ccb2739-ac38-400e-99ca-9fab7206d145" />
+
+As I was routing the decoupling capacitors for the power pins, I realized that I may have underestimated the size of the vias. I may have placed the components a little too close to each other, so I had to share GND vias between capacitors.
+
+<img width="1917" height="790" alt="image" src="https://github.com/user-attachments/assets/82bed69e-8dda-4a09-a9cb-a6229b8580b9" />
+
+After finishing that section, I looked back at my work, and I honestly thought I could have squeezed in dedicated GND vias. However, the amount of space is deceptive as the Design Rule Checker did not let me cleanly place vias there.
+
+<img width="1917" height="792" alt="image" src="https://github.com/user-attachments/assets/2d423338-4fdb-40a1-96a3-6d5f256b3e5e" />
+
+**Total time spent: 2.7 hours**
+
+---

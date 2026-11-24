@@ -219,8 +219,58 @@ I then placed the USB-A male part on the right side, so I could visualize how mu
 
 <img width="1814" height="984" alt="image" src="https://github.com/user-attachments/assets/4fce2ec2-b76a-405f-8d8c-0e42a669de3a" />
 
-I began placing the passives and 
+I began placing the passives and ESD protection chip for the USB-A, and I quickly realized that I may need to make the border a little bigger.
 
+<img width="1820" height="989" alt="image" src="https://github.com/user-attachments/assets/673bed4f-81c7-4081-8d61-538d872bc643" />
+<img width="1820" height="989" alt="image" src="https://github.com/user-attachments/assets/4da630c0-b911-4afe-a515-636ba4dcc84b" />
+
+The MCU would not fit!
+
+<img width="1820" height="989" alt="image" src="https://github.com/user-attachments/assets/02aaa6f2-21db-4c1f-861a-289c8b33043a" />
+
+Nonetheless, I tried filling up the space near the USB-A male part with the two buttons (for CHIP_PU and GPIO 0 boot) and the cryptographic chip.
+
+<img width="1820" height="989" alt="image" src="https://github.com/user-attachments/assets/3d831edb-27f8-4bfd-9d61-2e5d235c34a4" />
+
+I also tried to place the LDO above, but it left an odd gap, which made it difficult to make the dongle as compact as possible.
+
+<img width="1820" height="989" alt="image" src="https://github.com/user-attachments/assets/5fec3464-1b34-442e-a1f2-e3db181a951e" />
+
+I tried different methods, but I wasn't getting much better results.
+
+<img width="1817" height="988" alt="image" src="https://github.com/user-attachments/assets/75ed3bd2-e749-4320-8ab4-9567096ad3be" />
+
+Finally, I decided to make the border outline bigger, so I could fit traces as well.
+
+<img width="1817" height="988" alt="image" src="https://github.com/user-attachments/assets/dc6d70e3-9f65-41d5-9292-f1317869a5ce" />
+
+I settled on packing the passives together with the LDO in a compact square.
+
+<img width="1817" height="988" alt="image" src="https://github.com/user-attachments/assets/d8dd8c44-dd95-4097-8456-97f94bdd420d" />
+
+Naturally, I felt that the MCU should be in the middle of the PCB, but placing it there made it difficult to fit other components, like the big microphone.
+
+<img width="1817" height="988" alt="image" src="https://github.com/user-attachments/assets/a01a010b-61e7-425f-9588-50b66e73e46d" />
+
+Then, I came up with a new idea: rotating the MCU 45 degrees. This was my first time trying this technique, so I want to see if this helps fit more passives and tiny ICs in a dense PCB layout!
+
+<img width="1817" height="988" alt="image" src="https://github.com/user-attachments/assets/93b77cef-8442-4a7a-aa34-bdb7724781ae" />
+
+I began placing passives around the MCU, and I have to admit that I really liked how this method looked. 
+
+<img width="1780" height="988" alt="image" src="https://github.com/user-attachments/assets/c9c1cdc7-306c-4e7b-b021-c1e433a1a23d" />
+<img width="1780" height="988" alt="image" src="https://github.com/user-attachments/assets/8dbd4388-8efb-42c6-8faa-0f0573b732a7" />
+
+However, one downside was using the measurement ruler tool to check for clearances. It does not cleanly snap onto rotated objects very well.
+
+While placing the parts for the 40MHz crystal oscillator, I had to be careful since I needed to make sure that I still had enough space for traces.
+
+<img width="1780" height="988" alt="image" src="https://github.com/user-attachments/assets/3f1a53a7-57e0-4d49-80c4-0ce618f5dc24" />
+
+I had some trouble while placing the capacitors and pull-up resistors near the MCU power section as the pins were right next to each other, and ideally, I wanted the passives next to their respective pins. I played around with the placement since the main power section required 4 capacitors! Next to that was the GPIO0 boot pin and CHIP_PU pin, which needed more passives!
+
+<img width="1780" height="988" alt="image" src="https://github.com/user-attachments/assets/06dcec8e-c38d-4df2-a4e2-5b44c88a4880" />
+<img width="1816" height="980" alt="image" src="https://github.com/user-attachments/assets/044e8cf1-4324-4c8f-bb1e-54b1f4006ade" />
 
 **Total time spent: 2.5 hours**
 

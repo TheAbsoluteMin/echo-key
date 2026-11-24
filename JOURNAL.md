@@ -275,3 +275,90 @@ I had some trouble while placing the capacitors and pull-up resistors near the M
 **Total time spent: 2.5 hours**
 
 ---
+
+# Log 9: 11.19.2026 - Finishing PCB Placement
+
+Timelapse <a href="https://lapse.hackclub.com/timelapse/Sy0QnugHpmZM">link</a>.
+
+That LDO keeps bothering me no matter how I place it! It simply doesn't transition well with the 45 degree placement, and it is making me mad!
+
+<img width="1816" height="980" alt="image" src="https://github.com/user-attachments/assets/fc433f7e-931e-4970-b233-06caa99f3153" />
+
+After some thinking, I realized that I could simply rotate it as well!
+
+<img width="1816" height="980" alt="image" src="https://github.com/user-attachments/assets/9eddae62-1628-47ed-b096-3a1a7b380213" />
+
+I like that rotation so much that I decided to rotate the cryptographic chip as well to create a uniform theme, but I realized that it did not work for everything. It was simply too big.
+
+<img width="1816" height="980" alt="image" src="https://github.com/user-attachments/assets/ba5eac8d-53af-44ff-bad9-50bc7e3dba63" />
+
+I wanted to keep all the tiny passives, like the capacitors, rotated 45 degrees, but some would not fit easily, especially the decoupling capacitors.
+
+<img width="1808" height="988" alt="image" src="https://github.com/user-attachments/assets/52e13b0e-217c-4d5a-b7be-1cc058c297a9" />
+
+After some more experimentation, I got them to fit in like a puzzle.
+
+<img width="1808" height="988" alt="image" src="https://github.com/user-attachments/assets/e2799fde-ff07-46f3-9858-aafdd217e80a" />
+<img width="1808" height="988" alt="image" src="https://github.com/user-attachments/assets/a322e44e-b067-4d55-920e-68b548a37dce" />
+<img width="1808" height="988" alt="image" src="https://github.com/user-attachments/assets/1ae0e4de-1202-4451-89b4-25075fc300df" />
+
+While I had originally wanted to put the microphone at the end of the dongle, I decided that it was too big to fit there. Instead, I placed the RGB LED in the bottom left corner.
+
+<img width="1808" height="988" alt="image" src="https://github.com/user-attachments/assets/f122cfe7-ce2e-4d21-af05-022bd96a0a99" />
+<img width="1808" height="988" alt="image" src="https://github.com/user-attachments/assets/999b8562-5cbe-40c7-8fec-aff05001bd04" />
+
+I put the microphone to the right of the LED.
+
+<img width="1808" height="988" alt="image" src="https://github.com/user-attachments/assets/0de8661a-dbdd-4533-b302-377e2d382c3b" />
+
+Since it did not leave much room for its passives (pull-down resistor and decoupling capacitor), I rotated it 45 degrees as well. Fortunately, there was enough room!
+
+<img width="1808" height="988" alt="image" src="https://github.com/user-attachments/assets/9d383006-bab1-4408-af4d-0682623ec975" />
+
+Placing the passives near the cryptographic chip was easier since I had a lot of empty space above it.
+
+<img width="1813" height="989" alt="image" src="https://github.com/user-attachments/assets/1aa77449-008f-4f59-9450-a65cdceda83b" />
+
+With that, all the placements were finished!
+
+<img width="1813" height="989" alt="image" src="https://github.com/user-attachments/assets/bec5ec41-2106-4b7a-b871-ae0dad85ae88" />
+
+I checked the 2D and 3D viewer to make sure that none of the copper pads were overlapping.
+
+<img width="1813" height="989" alt="image" src="https://github.com/user-attachments/assets/d78c2017-dac6-409c-80ed-86b94ecc8c2d" />
+<img width="1813" height="989" alt="image" src="https://github.com/user-attachments/assets/2ae4e2bb-443d-40de-b6c4-9e415b3518d3" />
+
+However, in order to make sure that the clearances were enough for JLCPCB to manufacture and to place components through PCBA, I tried my best to check that every part had at least a 0.3mm clearance between each other.
+
+<img width="1813" height="989" alt="image" src="https://github.com/user-attachments/assets/b30f3e94-a5b4-49f9-9759-9f46e2eee841" />
+
+Of course, I had to move some parts to create a greater clearance.
+
+<img width="1813" height="989" alt="image" src="https://github.com/user-attachments/assets/92b17a85-b143-4454-8132-0a571e23e1ea" />
+
+Finally, I was ready to begin routing! I first began to route the USB data lines. I chose to use a trace width of 0.2 mm with a trace to trace clearance of 0.1 mm for the differential pairs. While it did not achieve a perfect 90 ohms impedance, I chose 0.2mm since it was the width of the MCU pins. 
+
+<img width="1816" height="979" alt="image" src="https://github.com/user-attachments/assets/b407de43-ab50-4576-93d6-74b6a9884672" />
+
+For some reason, EasyEDA Pro was giving me an error for my 0.1 mm setting, so I changed it to 0.102 mm. Another problem I encountered was that the data positive and data negative pins were swapped on the USB-A footprint compared to the MCU data pin order! This meant that I would not be able to route a clean differential pair. I first tried to route them by looping over, but obviously, the lengths did not match.
+
+<img width="1816" height="979" alt="image" src="https://github.com/user-attachments/assets/63cd4778-3868-43b8-bb06-452c8e902aff" />
+
+I then tried using vias, but it created a big mess.
+
+<img width="1816" height="979" alt="image" src="https://github.com/user-attachments/assets/48516252-c57e-4800-9649-edc956beb875" />
+<img width="1816" height="979" alt="image" src="https://github.com/user-attachments/assets/b76849b1-c185-4148-a86c-ce31215d6e0b" />
+
+Then, I decided to place vias together at the ESD protection chip. That allowed me to route both USB data lines together on the back layer.
+
+<img width="1816" height="979" alt="image" src="https://github.com/user-attachments/assets/23964b91-f345-4d55-9cf3-100bd0f93fd5" />
+
+This was routing was much cleaner!
+
+<img width="1816" height="979" alt="image" src="https://github.com/user-attachments/assets/3e1a1d86-47df-4dcf-86c5-334ff8bb0646" />
+
+//more update
+
+**Total time spent: 4.4 hours**
+
+---

@@ -1,6 +1,8 @@
 # EchoKey
 A compact USB dongle PC buddy for your everyday voice commands.
 
+<img width="1191" height="557" alt="image" src="https://github.com/user-attachments/assets/a1e7915d-3c8f-4093-bcd5-2fc1799c1c94" />
+<img width="1183" height="547" alt="image" src="https://github.com/user-attachments/assets/d17ab020-cad7-45f6-9218-ccd87530e775" />
 <img width="1212" height="586" alt="image" src="https://github.com/user-attachments/assets/60c03c33-9db8-4856-a244-bae3212a18ce" />
 <img width="1218" height="566" alt="image" src="https://github.com/user-attachments/assets/157348a1-aac6-489b-aaf8-9a950ee753e0" />
 
@@ -38,16 +40,12 @@ Bottom Layer
 ## CAD Case
 3D model link.
 
-?
-<details>
-<summary>
-  <h3>Pictures</h3>
-</summary>
-?
-</details>
+<img width="1125" height="596" alt="image" src="https://github.com/user-attachments/assets/db627a2c-f759-48e6-b5b8-b37869b5842a" />
+<img width="1146" height="658" alt="image" src="https://github.com/user-attachments/assets/d0d77722-ef2b-4d26-ad1f-ead11317bbef" />
 
 ### CAD Case Assembly
-1. ? 
+1. Place the PCB inside the bottom case.
+2. Snap the top case on top of the bottom case as indicated by the flap openings.
 
 ## How To Use
 1. ?

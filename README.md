@@ -48,7 +48,7 @@ Bottom Layer
 ## CAD Case
 3D model [link](https://cad.onshape.com/documents/e4c9730ebec5d1d041092811/w/5043915807800571eed6817e/e/91807bb1fb76b7eb880418f3?renderMode=0&uiState=6b076fba8c47a01ad8a7109b).
 
-Assembled Model
+The case was designed with Onshape.
 
 <img width="1125" height="596" alt="image" src="https://github.com/user-attachments/assets/db627a2c-f759-48e6-b5b8-b37869b5842a" />
 <img width="1146" height="658" alt="image" src="https://github.com/user-attachments/assets/d0d77722-ef2b-4d26-ad1f-ead11317bbef" />

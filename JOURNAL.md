@@ -412,3 +412,65 @@ After finishing that section, I looked back at my work, and I honestly thought I
 **Total time spent: 2.7 hours**
 
 ---
+
+# Log 11: 11.21.2026 - Adjusting PCB Placement For Routing
+
+Timelapse <a href="https://lapse.hackclub.com/timelapse/ohfJgeljYI6U">link</a>.
+
+After I had routed the decoupling capacitors, I looked at the passives near the bottom right corner of my PCB, and I realized that I did not have enough space to break out vias. For example, I had a LED resistor, pull-up resistor, and a capacitor that all needed vias ($1N27, R_LED, GND nets) in one place!
+
+<img width="1917" height="792" alt="image" src="https://github.com/user-attachments/assets/3155123e-0a9e-4797-aff7-69075df426ec" />
+
+In order to make more space, I tried to move the microphone up a little bit, so I could some passives down, where there was more space to place vias.
+
+<img width="1917" height="781" alt="image" src="https://github.com/user-attachments/assets/e70e8575-9032-4ab5-bf20-06f3ee66104f" />
+<img width="1917" height="801" alt="image" src="https://github.com/user-attachments/assets/e72c5f9f-7412-4ba5-9224-f9c3a1c11480" />
+
+I then tried to experiment with different rotations and placements of the passives while optimizing clearances.
+
+<img width="1917" height="792" alt="image" src="https://github.com/user-attachments/assets/08bb14d8-abfc-47bf-8352-5106a2f24943" />
+<img width="1917" height="797" alt="image" src="https://github.com/user-attachments/assets/e8da9bc1-5bcb-4ed3-899e-7457b1ca8f59" />
+<img width="1917" height="782" alt="image" src="https://github.com/user-attachments/assets/7cb4ba51-9bda-433c-9dd7-0c4c4880a379" />
+
+While doing so, I figured out a way to make rotated measurements much easier! It turns out by pressing alt+s to get "close snap", you could change the snap setting on and off. When it is off, the snap setting won't try to fix you into set intervals of measurements, and you can freely measure with greater precision!
+
+<img width="1917" height="792" alt="image" src="https://github.com/user-attachments/assets/bcf7fa3b-8464-40b0-920e-6f99bff47ed0" />
+
+It was quite annoying since I couldn't easily find a good place for all the passives. Wherever I placed one, it just seemed to close to another one or the border!
+
+<img width="1917" height="787" alt="image" src="https://github.com/user-attachments/assets/775c17d5-6640-42ea-940f-1a6e32832e73" />
+<img width="1917" height="792" alt="image" src="https://github.com/user-attachments/assets/f25baf16-bbc6-408d-a340-370d1ad94b22" />
+
+After that, I began routing pin 4 and 5 (CHIP_PU and GPIO0)'s pull-up resistors and buttons. I used vias since I couldn't give up space (I need it for the microphone traces next to it!) to stay on the top layer.
+
+<img width="1917" height="788" alt="image" src="https://github.com/user-attachments/assets/912334e0-367b-4636-8850-2104db995da9" />
+
+Surprisingly, there still was not enough space for dedicated GND vias for every part, so I had to compromise and share GND vias with the microphone.
+
+<img width="1917" height="782" alt="image" src="https://github.com/user-attachments/assets/d1193af7-50a0-4dbb-9564-a33ac3b9868a" />
+
+I couldn't believe how far I ended up placing the decoupling capacitor for the CHIP_PU (enable) button! Fortunately, it was only a power-on timing delay capacitor.
+
+<img width="1917" height="783" alt="image" src="https://github.com/user-attachments/assets/bece7367-295d-4594-a12e-0877734d0371" />
+<img width="1917" height="787" alt="image" src="https://github.com/user-attachments/assets/767496b8-a5d9-48fd-8291-07f168ace357" />
+
+After making space for a single via above where the three passives intersected ($1N27, R_LED, GND nets), it still did not pass the design rule clearances.
+
+<img width="1917" height="792" alt="image" src="https://github.com/user-attachments/assets/cff32a30-2d4f-4a24-a99d-fab0af80256e" />
+
+In order to make more room, I moved the decoupling capacitors up.
+
+<img width="1917" height="792" alt="image" src="https://github.com/user-attachments/assets/f0c89233-48ec-4c97-ac54-61bb6435d10c" />
+
+Now, I'm sure I have enough space for one via.
+
+<img width="1917" height="788" alt="image" src="https://github.com/user-attachments/assets/c93ebb1e-4fa9-45c4-b972-bf4b249ffe47" />
+<img width="1917" height="790" alt="image" src="https://github.com/user-attachments/assets/179ed879-9afd-4a3b-b4f8-1316e63afb6d" />
+
+With all the vias I had placed, there was not much freedom in connecting traces on the bottom layer!
+
+<img width="1917" height="795" alt="image" src="https://github.com/user-attachments/assets/a842412c-f358-48b7-bce7-41472a1ca38f" />
+
+**Total time spent: 2.6 hours**
+
+---

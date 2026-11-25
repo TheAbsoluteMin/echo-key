@@ -21,18 +21,26 @@ EchoKey was designed with EasyEDA Pro.
 <img width="1168" height="595" alt="image" src="https://github.com/user-attachments/assets/f31c1f43-2969-4b9d-a773-6f7788b83907" />
 <img width="1192" height="630" alt="image" src="https://github.com/user-attachments/assets/ee74ed83-d15f-4e4e-aa90-bc6c29913c27" />
 
-### PCB Layers
+<details>
+<summary>
+  <h3>PCB Layers</h3>
+</summary>
 Top Layer
+  
 <img width="1146" height="505" alt="image" src="https://github.com/user-attachments/assets/f6fef03a-8aba-42cd-b83c-22cc5291d435" />
 
 Inner Layer 1
+
 <img width="1155" height="530" alt="image" src="https://github.com/user-attachments/assets/5ec9f94c-92dc-4078-a242-1ec82047b115" />
 
 Inner Layer 2
+
 <img width="1158" height="527" alt="image" src="https://github.com/user-attachments/assets/60e03415-c090-4e26-a7eb-8754672d1f67" />
 
 Bottom Layer
+
 <img width="1162" height="546" alt="image" src="https://github.com/user-attachments/assets/4f1abfbb-0496-4694-863c-47bf5b985a81" />
+</details>
 
 ### PCB Assembly
 1. Solder the USB-A component onto the PCB onto the marked end.
@@ -40,8 +48,29 @@ Bottom Layer
 ## CAD Case
 3D model [link](https://cad.onshape.com/documents/e4c9730ebec5d1d041092811/w/5043915807800571eed6817e/e/91807bb1fb76b7eb880418f3?renderMode=0&uiState=6b076fba8c47a01ad8a7109b).
 
+Assembled Model
+
 <img width="1125" height="596" alt="image" src="https://github.com/user-attachments/assets/db627a2c-f759-48e6-b5b8-b37869b5842a" />
 <img width="1146" height="658" alt="image" src="https://github.com/user-attachments/assets/d0d77722-ef2b-4d26-ad1f-ead11317bbef" />
+
+<details>
+<summary>
+  <h3>CAD Layers</h3>
+</summary>
+Assembled Case
+
+<img width="1012" height="572" alt="image" src="https://github.com/user-attachments/assets/5401c6d2-8ff1-4917-a1b2-3caba08ba945" />
+
+Top Case
+
+<img width="922" height="553" alt="image" src="https://github.com/user-attachments/assets/6432dc0f-2b4f-4bf9-a2c9-293b14b1ca95" />
+<img width="900" height="572" alt="image" src="https://github.com/user-attachments/assets/025d0d32-38f9-4f7d-952a-d56a15fd72e8" />
+
+Bottom Case
+
+<img width="935" height="577" alt="image" src="https://github.com/user-attachments/assets/f1e3371d-8b81-4ce7-9c24-529a1c04f3e6" />
+<img width="933" height="618" alt="image" src="https://github.com/user-attachments/assets/dd418e8d-7ac8-4d58-942a-1f10f777fa2f" />
+</details>
 
 ### CAD Case Assembly
 1. Place the PCB inside the bottom case.

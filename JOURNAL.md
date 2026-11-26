@@ -474,3 +474,98 @@ With all the vias I had placed, there was not much freedom in connecting traces 
 **Total time spent: 2.6 hours**
 
 ---
+
+# Log 12: 11.22.2026 - Completed Routing PCB
+
+Timelapse <a href="https://lapse.hackclub.com/timelapse/G1B7HKJc6Uge">link</a>.
+
+I continued routing the rest of the decoupling capacitors around the MCU.
+
+<img width="1918" height="798" alt="image" src="https://github.com/user-attachments/assets/8f7e46e9-92e1-428e-b754-72241a57ed74" />
+<img width="1918" height="797" alt="image" src="https://github.com/user-attachments/assets/36a238e9-84e1-412e-a93a-bfbfbe04b5f1" />
+
+Then, I began to work on the peripherals, including the microphone, cryptographic chip, and the LED.
+
+<img width="1918" height="801" alt="image" src="https://github.com/user-attachments/assets/44974d00-b7a7-4d47-b952-4ea745fab185" />
+
+Since it was a compact board, I tried my best to keep my trace design rules simple. Mainly, I kept all the data lines at 0.127 mm wide, which I formatted under the "tiny" net class.
+
+<img width="1918" height="796" alt="image" src="https://github.com/user-attachments/assets/251e256d-eb5f-4e5e-b180-f82e8795977e" />
+
+I easily routed the 3V3 connection for the microphone's decoupling capacitor, but I realized that I could not easily squeeze in a 3V3 via to connect to the main power line.
+
+<img width="1918" height="801" alt="image" src="https://github.com/user-attachments/assets/4dc77e74-cdd5-4986-9011-71b13afe9264" />
+
+Thus, I needed to move the passives again to make some room!
+
+<img width="1918" height="795" alt="image" src="https://github.com/user-attachments/assets/d291c5d1-9ac0-4f05-b71c-1399031ea56d" />
+
+I wanted to keep all the series resistors for my RGB LED together, but each of them needed more vias to connect to the MCU, which would have taken even more space that I did not have in that corner.
+
+<img width="1918" height="796" alt="image" src="https://github.com/user-attachments/assets/82bc3f6a-511c-4e9b-b908-0390ed399ab9" />
+
+I looked around the board to see if there was any more space I could fit a tiny resistor, and I found an opening near the main 3V3 power supply!
+
+<img width="1918" height="796" alt="image" src="https://github.com/user-attachments/assets/532b8253-ad8f-4967-9486-c4a8f01637bf" />
+
+It fit very well, so I rerouted the 3V3 LDO to meet clearance rules.
+
+<img width="1918" height="792" alt="image" src="https://github.com/user-attachments/assets/8b760e99-b6b5-4271-87fd-544a7d1fa227" />
+
+I wanted to fit another GND via here since I shared too many GND connections, so I tried to move the pull-up resistor ($1N27 net) via to the side.
+
+<img width="1918" height="797" alt="image" src="https://github.com/user-attachments/assets/8e268a2f-48b5-4a24-bba7-7f60a46b71d5" />
+<img width="1918" height="792" alt="image" src="https://github.com/user-attachments/assets/0e304bbe-5fc1-49de-9a6b-a98f7e785846" />
+
+After that, I finally placed that 3V3 via for the microphone above the LED.
+
+<img width="1918" height="793" alt="image" src="https://github.com/user-attachments/assets/cef71c4d-0ec2-4dd0-9af2-5952652b681d" />
+
+I then needed to route the 100k pull-down resistor for the SD_MIC connection of the microphone. However, I realized that I would need to route on the 3rd layer (Inner 2) of the PCB since I did not have any more room on the 4th (bottom) layer. Obviously, I tried my best to minimize the length of traces on that layer by switching back to the 4th layer wherever I had space.
+
+<img width="1918" height="798" alt="image" src="https://github.com/user-attachments/assets/5115226a-93e3-4b78-b7b7-bde04315ae67" />
+<img width="1918" height="800" alt="image" src="https://github.com/user-attachments/assets/7175a69d-ab31-4fac-8f4b-20b6473482fc" />
+
+There wasn't enough space for more layer switching with vias (since I also had to save room for other data connections near the MCU pins), so I decided to just stick with the 3rd layer trace.
+
+<img width="1918" height="793" alt="image" src="https://github.com/user-attachments/assets/c3bd8a00-94a1-4b22-a472-c574bc6e9ef1" />
+<img width="1918" height="797" alt="image" src="https://github.com/user-attachments/assets/df9723e7-5084-46e6-9ebd-cc1f8fffc468" />
+
+I ended up moving traces around to make room for my SDA/SCL lines (which were right next to the microphone lines).
+
+<img width="1918" height="801" alt="image" src="https://github.com/user-attachments/assets/55edc082-9357-43de-84e9-19f54426240a" />
+<img width="1918" height="796" alt="image" src="https://github.com/user-attachments/assets/2f75a7ad-435c-43e4-bdbe-a1cebd74f506" />
+<img width="1918" height="798" alt="image" src="https://github.com/user-attachments/assets/669c357e-2311-4cdf-b0a7-9dcfb2ef5370" />
+
+I used way too many vias near the MCU pins, so I did not have any more room for 3 more vias for the RGB LED lines. As a result, I decided to switch to a simple single color LED, so I could use only one via.
+
+<img width="1918" height="791" alt="image" src="https://github.com/user-attachments/assets/dbf68fd7-d16c-487f-9fb2-16d16d47a682" />
+
+Fortunately, it fit well in the corner!
+
+<img width="1918" height="796" alt="image" src="https://github.com/user-attachments/assets/f4fe3672-d523-4b71-86e0-05e6366d6da1" />
+
+After that, I began placing the GND vias for the main exposed pad for the ESP32 MCU. It was a bit tricky since the entire chip was already rotated 45 degrees, so I had to calculate exact lengths to place them from the middle via.
+
+<img width="1917" height="798" alt="image" src="https://github.com/user-attachments/assets/86ceb03b-3293-4ef2-bb9f-b86a0ace4436" />
+<img width="1917" height="798" alt="image" src="https://github.com/user-attachments/assets/c8fcb765-f5fa-429f-8e54-d7620219ff0a" />
+<img width="1918" height="796" alt="image" src="https://github.com/user-attachments/assets/0fa6bc4f-50dd-4cd3-bf72-c812f3edaea7" />
+<img width="1918" height="795" alt="image" src="https://github.com/user-attachments/assets/175f8ceb-a304-495d-8ed2-1a01b783dac1" />
+
+For the main 3V3 power lines, I decided to simply branch them out with 0.4 mm thick traces rather than using an entire plane copper pour since I wanted to also do a GND pour on the 3rd layer as well.
+
+<img width="1918" height="795" alt="image" src="https://github.com/user-attachments/assets/74236eeb-021c-4435-8687-f90aecad067d" />
+<img width="1918" height="796" alt="image" src="https://github.com/user-attachments/assets/260027f4-1dc0-40c2-8dc2-388b25efc0c5" />
+
+Finally, I added a GND copper pour on the 2nd and 3rd layers!
+
+<img width="1918" height="798" alt="image" src="https://github.com/user-attachments/assets/9f485144-0905-426d-82eb-fefff27146a9" />
+<img width="1918" height="801" alt="image" src="https://github.com/user-attachments/assets/a9452c7f-06ba-4ad2-b150-7695fdf6ac67" />
+
+The PCB is finished!
+
+<img width="1918" height="795" alt="image" src="https://github.com/user-attachments/assets/0a78b702-777b-4cb7-b2cb-c2f4f1e40c8a" />
+
+**Total time spent: 5.3 hours**
+
+---

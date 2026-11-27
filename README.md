@@ -1,10 +1,9 @@
 # EchoKey
 A compact USB dongle PC buddy for your everyday voice commands.
 
-<img width="1191" height="557" alt="image" src="https://github.com/user-attachments/assets/a1e7915d-3c8f-4093-bcd5-2fc1799c1c94" />
-<img width="1183" height="547" alt="image" src="https://github.com/user-attachments/assets/d17ab020-cad7-45f6-9218-ccd87530e775" />
-<img width="1212" height="586" alt="image" src="https://github.com/user-attachments/assets/60c03c33-9db8-4856-a244-bae3212a18ce" />
-<img width="1218" height="566" alt="image" src="https://github.com/user-attachments/assets/157348a1-aac6-489b-aaf8-9a950ee753e0" />
+<img width="1920" height="1080" alt="Full_EchoKey_Render" src="https://github.com/user-attachments/assets/248f5c21-5093-4615-a5a9-738974a85cc4" />
+<img width="1920" height="1080" alt="Exploded_View_EchoKey_Render" src="https://github.com/user-attachments/assets/8ea763fd-86de-4567-a901-f0c06081d40f" />
+<img width="1920" height="1080" alt="PCB_EchoKey_Render" src="https://github.com/user-attachments/assets/092ae6de-8c89-4dea-ad58-ea0c86fb9daa" />
 
 ## Introduction
 EchoKey first started out as a traditional boxy macropad with keys and a rotary encoder. However, after almost five months since its initial creation, it has now been completely transformed. EchoKey reimagines the macropad into a sleek and more easily portable dongle. Instead of spending seconds to figure out which physical key to press, you talk to it with voice commands in order for the dongle to send macros to your device in only milliseconds. While keeping the same small form factor, you can program hundreds of macros, breaking free from the constraint of adding more buttons for more macros. With the ATECC608C-SSHDA-T cryptographic chip, EchoKey also opens up the possibility to store and secure passwords for numerous different sites with your voice!
@@ -30,8 +29,15 @@ EchoKey first started out as a traditional boxy macropad with keys and a rotary 
 ## PCB
 EchoKey was designed with EasyEDA Pro.
 
+2D View
+
 <img width="1168" height="595" alt="image" src="https://github.com/user-attachments/assets/f31c1f43-2969-4b9d-a773-6f7788b83907" />
 <img width="1192" height="630" alt="image" src="https://github.com/user-attachments/assets/ee74ed83-d15f-4e4e-aa90-bc6c29913c27" />
+
+3D View
+
+<img width="1212" height="586" alt="image" src="https://github.com/user-attachments/assets/60c03c33-9db8-4856-a244-bae3212a18ce" />
+<img width="1218" height="566" alt="image" src="https://github.com/user-attachments/assets/157348a1-aac6-489b-aaf8-9a950ee753e0" />
 
 ### PCB Layers
 Top Layer
@@ -58,8 +64,8 @@ Bottom Layer
 
 The case was designed with Onshape.
 
-<img width="1125" height="596" alt="image" src="https://github.com/user-attachments/assets/db627a2c-f759-48e6-b5b8-b37869b5842a" />
-<img width="1146" height="658" alt="image" src="https://github.com/user-attachments/assets/d0d77722-ef2b-4d26-ad1f-ead11317bbef" />
+<img width="1191" height="557" alt="image" src="https://github.com/user-attachments/assets/a1e7915d-3c8f-4093-bcd5-2fc1799c1c94" />
+<img width="1183" height="547" alt="image" src="https://github.com/user-attachments/assets/d17ab020-cad7-45f6-9218-ccd87530e775" />
 
 ### CAD Layers
 Assembled Case

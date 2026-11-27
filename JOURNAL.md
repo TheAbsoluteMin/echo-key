@@ -569,3 +569,55 @@ The PCB is finished!
 **Total time spent: 5.3 hours**
 
 ---
+
+# Log 13: 11.24.2026 - Validating PCB + Starting GitHub Repo
+
+Timelapse <a href="https://lapse.hackclub.com/timelapse/hVb7ICQZ5EcF">link</a>.
+
+Since I finished routing all the traces, I just needed to quickly check my work.
+
+<img width="1810" height="1048" alt="image" src="https://github.com/user-attachments/assets/5d7dc68f-df20-4c3a-8326-a88cb39c5774" />
+
+I manually went through each connection and part number, especially the decoupling capacitors on the MCU, because the nets on the PCB editor all showed the same "+3V3" net and "GND". That meant I could have accidentally swapped a capacitor, and the Design Rule Checker would not have flagged that.
+
+<img width="1816" height="1031" alt="image" src="https://github.com/user-attachments/assets/ef1805ba-2e9f-4082-b5e2-ff4d7d1fda55" />
+
+After checking that the PCB matched the schematics, I ran the Design Rule Checker. Fortunately, this time, I had only 2 errors, and they were simply about the length matching for USB-A data lines (90 ohms differential pair).
+
+<img width="1812" height="1041" alt="image" src="https://github.com/user-attachments/assets/5f16c92f-4d8d-40ff-a29a-8403325c3f78" />
+
+The total mismatch was only about 2 mm, which I believe is fine for the ESP32-S3. It uses USB 2.0 Full-Speed at 12 Mbps, which meant I had some leniency in routing the USB data lines.
+
+After that, I began fixing the silkscreen, which is currently a huge mess with all the labels jumbled on top of each other.
+
+<img width="1811" height="1047" alt="image" src="https://github.com/user-attachments/assets/fca51f24-9e6a-422d-94b5-5b8086c65cee" />
+
+I ended up hiding the labels for the resistors, capacitors, and other passives by switching them to the document layer. There was not enough room on the silkscreen layer.
+
+<img width="1813" height="1048" alt="image" src="https://github.com/user-attachments/assets/0d79845e-1ec6-4cab-8e04-9cd63122ba59" />
+
+Obviously, I kept the IC labels.
+
+<img width="1817" height="1043" alt="image" src="https://github.com/user-attachments/assets/051109fb-1c93-41ed-b830-b6516604b4f3" />
+
+I then changed the switch labels to their respective functions (Enable and Boot), so I know what each does when I program the dongle later.
+
+<img width="1816" height="1043" alt="image" src="https://github.com/user-attachments/assets/0ae00329-4eef-47f3-b7dc-7f701a98c408" />
+
+I tried finding a place to put my signature, but there were too many vias (even on the back layer) that practically covered up most of the text!
+
+<img width="1815" height="1038" alt="image" src="https://github.com/user-attachments/assets/918a3cc6-9f88-45f1-953a-3c764530e6f0" />
+
+Finally finished with the PCB, I began to export the fabrication files (Gerber files, CPL placement files, and BOM) to host on GitHub.
+
+<img width="1813" height="1032" alt="image" src="https://github.com/user-attachments/assets/149d73b0-9e95-4172-a2b1-f79201097a65" />
+<img width="1817" height="1036" alt="image" src="https://github.com/user-attachments/assets/ed1ce7d7-28ce-4b69-972a-bcc9b77196f1" />
+<img width="1813" height="1042" alt="image" src="https://github.com/user-attachments/assets/bca2af11-175b-40de-82e0-5a6a9aafb475" />
+
+I began to import my screenshots and images for the PCB and schematics for EchoKey.
+
+<img width="1817" height="1042" alt="image" src="https://github.com/user-attachments/assets/039433e0-017a-431f-a837-5cbb70188b1d" />
+
+**Total time spent: 1.9 hours**
+
+---

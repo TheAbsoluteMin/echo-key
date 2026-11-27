@@ -120,9 +120,18 @@ Bottom Case
 | Part Name | Quantity | Total Price | Where to Buy |
 | :--- | :---: | :---: | :--- |
 | EchoKey PCB | 5 | $13.00 | [JLCPCB](https://jlcpcb.com/) |
-| EchoKey PCBA | 2 | $64.06 | [JLCPCB](https://jlcpcb.com/) |
+| EchoKey PCBA | 2 | $64.10 | [JLCPCB](https://jlcpcb.com/) |
 | EchoKey 3D Printed Parts | 1 | $1.00 | [Filament from local 3D printer](https://github.com/TheAbsoluteMin/echo-key/tree/main/3D_Models/3D_Printing) |
 | Total | (USD) | $78.06 | Without Shipping |
+
+<details>
+<summary>
+  <h3>JLCPCB Pricing Breakdown</h3>
+</summary>
+<img width="1755" height="600" alt="image" src="https://github.com/user-attachments/assets/8db7bef7-7ea6-4cd0-a198-e2ebd343947c" />  
+<img width="1091" height="996" alt="image" src="https://github.com/user-attachments/assets/27c73683-246a-4496-ab48-b6215c032d56" />
+<img width="1097" height="1032" alt="image" src="https://github.com/user-attachments/assets/a743ec5c-5e76-46f0-9b8c-a37da5209eca" />
+</details>
 
 ## Credits
 Thank you so much for generously funding and supporting the creation of EchoKey:

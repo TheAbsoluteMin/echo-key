@@ -57,7 +57,7 @@ Bottom Layer
 <img width="1162" height="546" alt="image" src="https://github.com/user-attachments/assets/4f1abfbb-0496-4694-863c-47bf5b985a81" />
 
 ### PCB Assembly
-1. After ordering the EchoKey PCBA from JLCPCB, solder the USB-A component onto the PCB onto the marked end.
+1. You can order the fully assembled board with JLCPCB PCBA or source the parts and solder them on yourself.
 
 ## CAD Case
 3D model [link](https://cad.onshape.com/documents/e4c9730ebec5d1d041092811/w/5043915807800571eed6817e/e/91807bb1fb76b7eb880418f3?renderMode=0&uiState=6b076fba8c47a01ad8a7109b).
@@ -91,10 +91,45 @@ Bottom Case
 2. Wake your dongle with your voice command, and watch it execute the command in real time.
 
 ## Firmware Logic: How It Works
-1. ?
+1. When you plug EchoKey into your device, it registers as a USB keyboard.
+
+<img width="1445" height="28" alt="image" src="https://github.com/user-attachments/assets/774d54b9-89b2-4f43-8992-b8aa507a02b6" />
+<img width="1447" height="102" alt="image" src="https://github.com/user-attachments/assets/dc8a79f0-39d3-4e4e-8ad7-9226c0928a19" />
+
+2. To save power, EchoKey first listens for a single wakeup command like "Hi ESP".
+
+<img width="1447" height="80" alt="image" src="https://github.com/user-attachments/assets/7df49517-f399-46a6-abb8-0622db0dd51c" />
+<img width="1450" height="148" alt="image" src="https://github.com/user-attachments/assets/6f6058f6-bc19-4239-884c-d9481b000a2d" />
+
+3. Once it hears the wakeup command, it briefly listens for your specific voice command.
+
+<img width="1447" height="97" alt="image" src="https://github.com/user-attachments/assets/412ee689-735c-42d1-a41c-02b303244dc1" />
+<img width="1448" height="90" alt="image" src="https://github.com/user-attachments/assets/4b17d21a-a8af-4875-b438-d12135fc3493" />
+
+4. It uses two different functions to send text strings or macros depending on your voice command.
+
+<img width="1447" height="275" alt="image" src="https://github.com/user-attachments/assets/4ddc5544-502c-46f2-86ab-abeb7282c20e" />
+<img width="1448" height="177" alt="image" src="https://github.com/user-attachments/assets/8ea5d5be-3bbd-4975-999a-84bf6897a391" />
 
 ### Firmware Setup
-?
+
+1. Install the latest ESP‑IDF [here](https://dl.espressif.com/dl/esp-idf/).
+2. Open the Firmware folder from [here](https://github.com/TheAbsoluteMin/echo-key/tree/main/Firmware) in ESP-IDF.
+3. The main code logic can be found [here](https://github.com/TheAbsoluteMin/echo-key/blob/main/Firmware/main/EchoKey.c). The other contents in the Firmware folder are configuration files for the ESP-IDF.
+
+You can edit your voice commands directly in that file here:
+
+<img width="1451" height="110" alt="image" src="https://github.com/user-attachments/assets/9f5d1f3d-b6c1-4864-ad12-04b4aeef9376" />
+
+Simply add the line below (in lowercase letters) with your voice command, and use a unique command ID for each":
+
+`esp_mn_commands_add(UNIQUE_COMMAND_ID, "your voice command here");`
+
+After that, you need to add an `else if` statement for each voice command, so EchoKey knows what to execute upon hearing it. You can change the below example code to fit your needs.
+
+<img width="1027" height="223" alt="image" src="https://github.com/user-attachments/assets/b971a9da-45cb-44f2-8c3d-86d229d8e0f2" />
+
+4. Make sure EchoKey is plugged into your device. Hold the boot button and tap the enable button on the dongle, so you can flash the firmware.
 
 ## PCB Components BOM
 
